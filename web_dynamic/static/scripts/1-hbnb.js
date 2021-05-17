@@ -9,7 +9,7 @@ JavaScript script (static/scripts/1-hbnb.js):
         update the H4 tag inside the DIV Amenities with the list of Amenities checked
 */
 
-$(document).ready(()=>{
+$(document).ready(() => {
   const amenityData = {};
   $('.amenities .popover input').change(function () {
     if ($(this).is(':checked')) {

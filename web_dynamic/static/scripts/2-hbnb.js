@@ -1,7 +1,7 @@
 const HOST = '0.0.0.0';
 const amenityData = {};
 
-$(document).ready(()=>{
+$(document).ready(() => {
   $('.amenities .popover input').change(function () {
     if ($(this).is(':checked')) {
       amenityData[$(this).attr('data-name')] = $(this).attr('data-id');
@@ -14,7 +14,7 @@ $(document).ready(()=>{
   statusAPI();
 });
 
-const statusAPI = ()=> {
+const statusAPI = () => {
   const END_POINT = `http://${HOST}:5001/api/v1/status/`;
   $.get(END_POINT, (data, textStatus) => {
     if (textStatus === 'success' && data.status === 'OK') {
@@ -23,4 +23,4 @@ const statusAPI = ()=> {
       $('#api_status').removeClass('available');
     }
   });
-}
+};

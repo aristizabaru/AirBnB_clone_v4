@@ -3,7 +3,7 @@ const END_POINT = `http://${HOST}:5001/api/v1/status/`;
 const PLACES_END_POINT = `http://${HOST}:5001/api/v1/places_search/`;
 const amenityData = {};
 
-$(document).ready(()=>{
+$(document).ready(() => {
   $('.amenities .popover input').change(function () {
     if ($(this).is(':checked')) {
       amenityData[$(this).attr('data-name')] = $(this).attr('data-id');
@@ -17,7 +17,7 @@ $(document).ready(()=>{
   fetchPlaces();
 });
 
-const statusAPI = ()=> {
+const statusAPI = () => {
   $.get(END_POINT, (data, textStatus) => {
     if (textStatus === 'success' && data.status === 'OK') {
       $('#api_status').addClass('available');
@@ -25,7 +25,7 @@ const statusAPI = ()=> {
       $('#api_status').removeClass('available');
     }
   });
-}
+};
 
 const fetchPlaces = () => {
   $.ajax({
@@ -57,5 +57,4 @@ const fetchPlaces = () => {
       console.log(error);
     }
   });
-}
-
+};
