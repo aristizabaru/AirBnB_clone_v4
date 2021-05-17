@@ -1,3 +1,10 @@
+/*
+JavaScript script (static/scripts/4-hbnb.js):
+
+    Based on 3-hbnb.js
+    When the BUTTON tag is clicked, a new POST request to places_search should be made with the list of Amenities checked
+*/
+
 const HOST = '0.0.0.0';
 const END_POINT = `http://${HOST}:5001/api/v1/status/`;
 const PLACES_END_POINT = `http://${HOST}:5001/api/v1/places_search/`;
