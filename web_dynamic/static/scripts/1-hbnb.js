@@ -1,3 +1,14 @@
+/*
+JavaScript script (static/scripts/1-hbnb.js):
+
+    Your script must be executed only when DOM is loaded
+    You must use JQuery
+    Listen for changes on each INPUT checkbox tag:
+        if the checkbox is checked, you must store the Amenity ID in a variable (dictionary or list)
+        if the checkbox is unchecked, you must remove the Amenity ID from the variable
+        update the H4 tag inside the DIV Amenities with the list of Amenities checked
+*/
+
 $(document).ready(()=>{
   const amenityData = {};
   $('.amenities .popover input').change(function () {
